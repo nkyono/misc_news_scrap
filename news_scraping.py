@@ -50,7 +50,6 @@ def main():
     # https://newsapi.org/docs/endpoints/everything
     for page in range(1,6):
         google_news_URL = "http://newsapi.org/v2/everything?{}sources={}&from={}&language=en&page={}&apiKey={}".format(query, source_string, query_date_from, page, apiKey)
-        # google_news_api = "24b35161aae841d6ac820be7a3c29e23"  # remove? although its free / url has it in it
         print(google_news_URL+'\n')
         google_response = requests.get(google_news_URL)
         if(google_response.status_code != 200):
